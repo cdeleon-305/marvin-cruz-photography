@@ -117,8 +117,8 @@ export function middleware(request: NextRequest) {
       </head>
       <body>
         <div class="container">
-          <h1>🔒 Private Site</h1>
-          <p>This site is currently private. Enter the password to continue.</p>
+          <h1>Access Required</h1>
+          <p>Please enter the password to continue.</p>
           <form method="GET">
             <div class="input-wrapper">
               <input
