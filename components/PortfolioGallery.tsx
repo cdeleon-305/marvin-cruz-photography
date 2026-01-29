@@ -6,25 +6,24 @@ import { useSearchParams } from "next/navigation";
 
 // Sample portfolio data - replace with actual images
 const portfolioImages = [
-  { id: 1, src: "/images/sports-1.jpg", alt: "Sports photo 1", category: "sports" },
-  { id: 2, src: "/images/sports-2.jpg", alt: "Sports photo 2", category: "sports" },
-  { id: 3, src: "/images/sports-3.jpg", alt: "Sports photo 3", category: "sports" },
-  { id: 4, src: "/images/sports-4.jpg", alt: "Sports photo 4", category: "sports" },
-  { id: 5, src: "/images/engagement-1.jpg", alt: "Engagement photo 1", category: "engagements" },
-  { id: 6, src: "/images/engagement-2.jpg", alt: "Engagement photo 2", category: "engagements" },
-  { id: 7, src: "/images/engagement-3.jpg", alt: "Engagement photo 3", category: "engagements" },
-  { id: 8, src: "/images/engagement-4.jpg", alt: "Engagement photo 4", category: "engagements" },
-  { id: 9, src: "/images/personal-1.jpg", alt: "Personal photo 1", category: "personal" },
-  { id: 10, src: "/images/personal-2.jpg", alt: "Personal photo 2", category: "personal" },
-  { id: 11, src: "/images/personal-3.jpg", alt: "Personal photo 3", category: "personal" },
-  { id: 12, src: "/images/personal-4.jpg", alt: "Personal photo 4", category: "personal" },
+  { id: 1, src: "/images/sports-1.jpg", alt: "Sports event photo 1", category: "events" },
+  { id: 2, src: "/images/sports-2.jpg", alt: "Sports event photo 2", category: "events" },
+  { id: 3, src: "/images/sports-3.jpg", alt: "Corporate event photo 1", category: "events" },
+  { id: 4, src: "/images/sports-4.jpg", alt: "Wedding photo 1", category: "events" },
+  { id: 5, src: "/images/engagement-1.jpg", alt: "Engagement photo 1", category: "events" },
+  { id: 6, src: "/images/engagement-2.jpg", alt: "Engagement photo 2", category: "events" },
+  { id: 7, src: "/images/engagement-3.jpg", alt: "Wedding photo 2", category: "events" },
+  { id: 8, src: "/images/engagement-4.jpg", alt: "Corporate event photo 2", category: "events" },
+  { id: 9, src: "/images/personal-1.jpg", alt: "Portrait photo 1", category: "portraits" },
+  { id: 10, src: "/images/personal-2.jpg", alt: "Portrait photo 2", category: "portraits" },
+  { id: 11, src: "/images/personal-3.jpg", alt: "Portrait photo 3", category: "portraits" },
+  { id: 12, src: "/images/personal-4.jpg", alt: "Portrait photo 4", category: "portraits" },
 ];
 
 const categories = [
   { id: "all", label: "All Work" },
-  { id: "sports", label: "Sports" },
-  { id: "engagements", label: "Engagements" },
-  { id: "personal", label: "Personal" },
+  { id: "events", label: "Sporting, Corporate, Wedding & Engagements" },
+  { id: "portraits", label: "Portraits" },
 ];
 
 export default function PortfolioGallery() {

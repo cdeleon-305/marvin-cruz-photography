@@ -4,25 +4,25 @@ import { FiTrendingUp, FiHeart, FiUser } from "react-icons/fi";
 
 const services = [
   {
-    title: "Sports Photography",
-    description: "Dynamic action shots capturing the intensity and emotion of athletic competition. Perfect for teams, athletes, and sporting events.",
+    title: "Sporting & Corporate Events",
+    description: "Dynamic action shots and professional corporate event coverage capturing the intensity, emotion, and key moments of your events.",
     icon: FiTrendingUp,
     image: "/images/sports-preview.jpg",
-    href: "/portfolio?category=sports",
+    href: "/portfolio?category=events",
   },
   {
-    title: "Engagement Photography",
-    description: "Romantic and authentic moments celebrating your love story. Beautiful imagery perfect for save-the-dates and wedding announcements.",
+    title: "Weddings & Engagements",
+    description: "Romantic and authentic moments celebrating your love story. Beautiful imagery perfect for your most memorable occasions.",
     icon: FiHeart,
     image: "/images/engagement-preview.jpg",
-    href: "/portfolio?category=engagements",
+    href: "/portfolio?category=events",
   },
   {
-    title: "Personal Shoots",
+    title: "Portrait Photography",
     description: "Professional portraits, family photos, and lifestyle sessions. Capture your personality and create lasting memories.",
     icon: FiUser,
     image: "/images/personal-preview.jpg",
-    href: "/portfolio?category=personal",
+    href: "/portfolio?category=portraits",
   },
 ];
 
