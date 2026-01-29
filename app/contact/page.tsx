@@ -9,30 +9,25 @@ export const metadata: Metadata = {
 
 export default function Contact() {
   return (
-    <div className="min-h-screen bg-gray-900">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white pt-32 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="font-display text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+    <div className="pt-20">
+      <div className="bg-brand text-white py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="font-display text-4xl md:text-6xl font-bold mb-4">
             Let's Work Together
           </h1>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            Ready to capture your special moments? Reach out using any method below
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+            Ready to capture your special moments? Fill out the form below or
+            reach out directly
           </p>
         </div>
       </div>
 
-      {/* Contact Info Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900">
-        <div className="max-w-4xl mx-auto">
-          <ContactInfo />
-        </div>
-      </section>
-
-      {/* Form Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800">
-        <div className="max-w-4xl mx-auto">
-          <ContactForm />
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <ContactForm />
+            <ContactInfo />
+          </div>
         </div>
       </section>
     </div>
