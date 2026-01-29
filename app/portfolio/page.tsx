@@ -29,7 +29,7 @@ function PortfolioLoading() {
 export default function Portfolio() {
   return (
     <div className="pt-20">
-      <div className="bg-gray-900 text-white py-16 px-4 sm:px-6 lg:px-8">
+      <div className="bg-brand text-white py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="font-display text-4xl md:text-6xl font-bold mb-4">
             Portfolio

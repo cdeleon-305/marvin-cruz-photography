@@ -43,13 +43,13 @@ export default function Navigation() {
               >
                 {link.label}
                 {isActive(link.href) && (
-                  <span className="absolute -bottom-[21px] left-0 right-0 h-0.5 bg-gray-900" />
+                  <span className="absolute -bottom-[21px] left-0 right-0 h-0.5 bg-brand" />
                 )}
               </Link>
             ))}
             <Link
               href="/contact"
-              className="bg-gray-900 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
+              className="bg-brand text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-brand-dark transition-colors"
             >
               Book Session
             </Link>
@@ -86,7 +86,7 @@ export default function Navigation() {
               <Link
                 href="/contact"
                 onClick={() => setIsOpen(false)}
-                className="bg-gray-900 text-white px-6 py-2 rounded-full text-base font-medium hover:bg-gray-800 transition-colors text-center"
+                className="bg-brand text-white px-6 py-2 rounded-full text-base font-medium hover:bg-brand-dark transition-colors text-center"
               >
                 Book Session
               </Link>
