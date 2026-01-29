@@ -25,7 +25,7 @@ export default function Navigation() {
           <Link href="/" className="flex items-center space-x-2 group">
             <FiCamera className="w-6 h-6 text-gray-900 group-hover:text-gray-600 transition-colors" />
             <span className="font-display text-xl font-bold text-gray-900">
-              Marvin Cruz
+              Marvin Cruz Photography
             </span>
           </Link>
 
@@ -49,7 +49,7 @@ export default function Navigation() {
             ))}
             <Link
               href="/contact"
-              className="bg-brand text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-brand-dark transition-colors"
+              className="bg-brand text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
             >
               Book Session
             </Link>
@@ -86,7 +86,7 @@ export default function Navigation() {
               <Link
                 href="/contact"
                 onClick={() => setIsOpen(false)}
-                className="bg-brand text-white px-6 py-2 rounded-full text-base font-medium hover:bg-brand-dark transition-colors text-center"
+                className="bg-brand text-white px-6 py-2 rounded-full text-base font-medium hover:bg-gray-800 transition-colors text-center"
               >
                 Book Session
               </Link>

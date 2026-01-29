@@ -1,20 +1,12 @@
-import Image from "next/image";
 import Link from "next/link";
+import HeroCarousel from "./HeroCarousel";
 
 export default function Hero() {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image - Replace with actual hero image */}
+      {/* Background Carousel */}
       <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/hero.jpg"
-          alt="Professional photography showcase"
-          fill
-          priority
-          className="object-cover brightness-75"
-          sizes="100vw"
-          quality={90}
-        />
+        <HeroCarousel />
       </div>
 
       {/* Content */}
@@ -45,7 +37,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+      <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-10">
         <div className="animate-bounce">
           <svg
             className="w-6 h-6 text-white"
