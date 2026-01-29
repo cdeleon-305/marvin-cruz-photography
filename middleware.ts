@@ -20,6 +20,7 @@ export function middleware(request: NextRequest) {
 
   // Check for password in URL params (for initial access)
   const password = request.nextUrl.searchParams.get('password');
+  const showError = password && password !== process.env.SITE_PASSWORD;
 
   if (password === process.env.SITE_PASSWORD) {
     const response = NextResponse.next();
@@ -110,6 +111,23 @@ export function middleware(request: NextRequest) {
             transition: background 0.2s;
           }
           button[type="submit"]:hover { background: #0051cc; }
+          .error {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #ef4444;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+          }
+          .shake {
+            animation: shake 0.5s;
+          }
+          @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+          }
           @media (max-width: 480px) {
             .container { padding: 1.5rem; }
           }
@@ -119,6 +137,7 @@ export function middleware(request: NextRequest) {
         <div class="container">
           <h1>Access Required</h1>
           <p>Please enter the password to continue.</p>
+          ${showError ? '<div class="error shake">❌ Incorrect password. Please try again.</div>' : ''}
           <form method="GET">
             <div class="input-wrapper">
               <input
