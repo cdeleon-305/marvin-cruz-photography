@@ -6,15 +6,15 @@ import Image from "next/image";
 const images = [
   {
     src: "/images/hero.jpg",
-    alt: "Professional photography showcase 1"
+    alt: "Professional photography showcase"
   },
   {
-    src: "/images/hero.jpg",
-    alt: "Professional photography showcase 2"
+    src: "/images/carousel-1.jpg",
+    alt: "National Championship 2026 at Hard Rock Stadium"
   },
   {
-    src: "/images/hero.jpg",
-    alt: "Professional photography showcase 3"
+    src: "/images/carousel-2.jpg",
+    alt: "Professional photography"
   }
 ];
 
