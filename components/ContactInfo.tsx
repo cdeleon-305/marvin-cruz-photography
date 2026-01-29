@@ -3,100 +3,83 @@ import { FiMail, FiPhone, FiMessageSquare, FiClock, FiMapPin } from "react-icons
 export default function ContactInfo() {
   return (
     <div className="space-y-8">
-      <div>
-        <h2 className="font-display text-3xl font-bold text-gray-900 mb-4">
-          Contact Information
+      <div className="text-center mb-12">
+        <h2 className="font-display text-3xl font-bold text-white mb-4">
+          Get In Touch
         </h2>
-        <p className="text-gray-600 leading-relaxed">
-          Prefer to reach out directly? Use any of the methods below. I'm available
-          for consultations and typically respond within 24 hours.
+        <p className="text-gray-400 leading-relaxed max-w-2xl mx-auto">
+          Choose your preferred method to reach out. I'm available for consultations
+          and typically respond within 24 hours.
         </p>
       </div>
 
-      {/* Contact Methods */}
-      <div className="space-y-6">
+      {/* Contact Methods Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Email */}
         <a
           href="mailto:marvindcruzjr@gmail.com"
-          className="flex items-start space-x-4 p-4 rounded-lg hover:bg-gray-50 transition-colors group"
+          className="flex flex-col items-center p-6 rounded-xl bg-gray-800/50 border border-gray-700 hover:border-brand hover:bg-gray-800 transition-all group"
         >
-          <div className="flex-shrink-0">
-            <div className="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center group-hover:bg-gray-800 transition-colors">
-              <FiMail className="w-5 h-5" />
-            </div>
+          <div className="w-16 h-16 bg-gradient-to-br from-brand to-brand-dark rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <FiMail className="w-7 h-7 text-white" />
           </div>
-          <div>
-            <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-            <p className="text-gray-600">marvindcruzjr@gmail.com</p>
-            <p className="text-sm text-gray-500 mt-1">Best for detailed inquiries</p>
-          </div>
+          <h3 className="font-semibold text-white mb-2">Email</h3>
+          <p className="text-gray-300 text-sm mb-1">marvindcruzjr@gmail.com</p>
+          <p className="text-xs text-gray-500">Best for detailed inquiries</p>
         </a>
 
         {/* Phone */}
         <a
           href="tel:+13054847595"
-          className="flex items-start space-x-4 p-4 rounded-lg hover:bg-gray-50 transition-colors group"
+          className="flex flex-col items-center p-6 rounded-xl bg-gray-800/50 border border-gray-700 hover:border-brand hover:bg-gray-800 transition-all group"
         >
-          <div className="flex-shrink-0">
-            <div className="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center group-hover:bg-gray-800 transition-colors">
-              <FiPhone className="w-5 h-5" />
-            </div>
+          <div className="w-16 h-16 bg-gradient-to-br from-brand to-brand-dark rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <FiPhone className="w-7 h-7 text-white" />
           </div>
-          <div>
-            <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-            <p className="text-gray-600">(305) 484-7595</p>
-            <p className="text-sm text-gray-500 mt-1">Mon-Fri, 9am-6pm</p>
-          </div>
+          <h3 className="font-semibold text-white mb-2">Phone</h3>
+          <p className="text-gray-300 text-sm mb-1">(305) 484-7595</p>
+          <p className="text-xs text-gray-500">Mon-Fri, 9am-6pm</p>
         </a>
 
         {/* Text/SMS */}
         <a
           href="sms:+13054847595"
-          className="flex items-start space-x-4 p-4 rounded-lg hover:bg-gray-50 transition-colors group"
+          className="flex flex-col items-center p-6 rounded-xl bg-gray-800/50 border border-gray-700 hover:border-brand hover:bg-gray-800 transition-all group"
         >
-          <div className="flex-shrink-0">
-            <div className="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center group-hover:bg-gray-800 transition-colors">
-              <FiMessageSquare className="w-5 h-5" />
-            </div>
+          <div className="w-16 h-16 bg-gradient-to-br from-brand to-brand-dark rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <FiMessageSquare className="w-7 h-7 text-white" />
           </div>
-          <div>
-            <h3 className="font-semibold text-gray-900 mb-1">Text Message</h3>
-            <p className="text-gray-600">(305) 484-7595</p>
-            <p className="text-sm text-gray-500 mt-1">Quick questions welcome</p>
-          </div>
+          <h3 className="font-semibold text-white mb-2">Text Message</h3>
+          <p className="text-gray-300 text-sm mb-1">(305) 484-7595</p>
+          <p className="text-xs text-gray-500">Quick questions welcome</p>
         </a>
       </div>
 
       {/* Additional Info */}
-      <div className="border-t border-gray-200 pt-8 space-y-4">
-        <div className="flex items-start space-x-3">
-          <FiClock className="w-5 h-5 text-gray-600 mt-0.5" />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12 pt-8 border-t border-gray-700">
+        <div className="flex items-start space-x-4 p-4 rounded-lg bg-gray-800/30">
+          <div className="flex-shrink-0 mt-1">
+            <FiClock className="w-5 h-5 text-brand" />
+          </div>
           <div>
-            <h3 className="font-semibold text-gray-900 mb-1">Response Time</h3>
-            <p className="text-gray-600 text-sm">
+            <h3 className="font-semibold text-white mb-1">Response Time</h3>
+            <p className="text-gray-400 text-sm">
               I typically respond within 24 hours, often sooner
             </p>
           </div>
         </div>
 
-        <div className="flex items-start space-x-3">
-          <FiMapPin className="w-5 h-5 text-gray-600 mt-0.5" />
+        <div className="flex items-start space-x-4 p-4 rounded-lg bg-gray-800/30">
+          <div className="flex-shrink-0 mt-1">
+            <FiMapPin className="w-5 h-5 text-brand" />
+          </div>
           <div>
-            <h3 className="font-semibold text-gray-900 mb-1">Service Area</h3>
-            <p className="text-gray-600 text-sm">
+            <h3 className="font-semibold text-white mb-1">Service Area</h3>
+            <p className="text-gray-400 text-sm">
               Based in Miami, serving South Florida
             </p>
           </div>
         </div>
-      </div>
-
-      {/* Social Proof */}
-      <div className="bg-gray-50 p-6 rounded-lg">
-        <p className="text-sm text-gray-600 italic">
-          "I typically respond within a few hours during business hours. Looking
-          forward to hearing about your project!"
-        </p>
-        <p className="text-sm font-medium text-gray-900 mt-2">- Marvin Cruz</p>
       </div>
     </div>
   );
