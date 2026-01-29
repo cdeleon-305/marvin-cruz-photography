@@ -52,25 +52,25 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="mailto:your.email@example.com"
+                  href="mailto:marvindcruzjr@gmail.com"
                   className="flex items-center space-x-2 text-sm hover:text-white transition-colors"
                 >
                   <FiMail className="w-4 h-4" />
-                  <span>your.email@example.com</span>
+                  <span>marvindcruzjr@gmail.com</span>
                 </a>
               </li>
               <li>
                 <a
-                  href="tel:+11234567890"
+                  href="tel:+13054847595"
                   className="flex items-center space-x-2 text-sm hover:text-white transition-colors"
                 >
                   <FiPhone className="w-4 h-4" />
-                  <span>(123) 456-7890</span>
+                  <span>(305) 484-7595</span>
                 </a>
               </li>
               <li className="flex items-center space-x-4 pt-2">
                 <a
-                  href="https://instagram.com"
+                  href="https://instagram.com/marvincruzphotography"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"
@@ -79,7 +79,7 @@ export default function Footer() {
                   <FiInstagram className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://facebook.com"
+                  href="https://facebook.com/marvincruzphotography"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"
@@ -93,7 +93,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
-          <p>&copy; {currentYear} Your Name Photography. All rights reserved.</p>
+          <p>&copy; {currentYear} Marvin Cruz Photography. All rights reserved.</p>
         </div>
       </div>
     </footer>

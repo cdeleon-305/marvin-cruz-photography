@@ -2,24 +2,22 @@ export default function StructuredData() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "name": "Your Name Photography",
-    "image": "https://yoursite.com/og-image.jpg",
-    "@id": "https://yoursite.com",
-    "url": "https://yoursite.com",
-    "telephone": "+11234567890",
-    "email": "your.email@example.com",
+    "name": "Marvin Cruz Photography",
+    "image": "https://marvin-cruz-photography.vercel.app/og-image.jpg",
+    "@id": "https://marvin-cruz-photography.vercel.app",
+    "url": "https://marvin-cruz-photography.vercel.app",
+    "telephone": "+13054847595",
+    "email": "marvindcruzjr@gmail.com",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Your Street Address",
-      "addressLocality": "Your City",
-      "addressRegion": "Your State",
-      "postalCode": "Your Zip",
+      "addressLocality": "Miami",
+      "addressRegion": "FL",
       "addressCountry": "US"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 0.0, // TODO: Add actual coordinates
-      "longitude": 0.0
+      "latitude": 25.7617,
+      "longitude": -80.1918
     },
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
@@ -34,8 +32,7 @@ export default function StructuredData() {
       "closes": "18:00"
     },
     "sameAs": [
-      "https://instagram.com/yourhandle",
-      "https://facebook.com/yourpage"
+      "https://instagram.com/marvincruzphotography"
     ],
     "priceRange": "$$",
     "serviceType": [

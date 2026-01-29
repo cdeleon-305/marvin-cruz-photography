@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://yoursite.com' // TODO: Replace with actual domain
+  const baseUrl = 'https://marvin-cruz-photography.vercel.app'
 
   return {
     rules: {

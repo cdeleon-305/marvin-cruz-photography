@@ -25,7 +25,7 @@ export default function Navigation() {
           <Link href="/" className="flex items-center space-x-2 group">
             <FiCamera className="w-6 h-6 text-gray-900 group-hover:text-gray-600 transition-colors" />
             <span className="font-display text-xl font-bold text-gray-900">
-              Your Name
+              Marvin Cruz
             </span>
           </Link>
 

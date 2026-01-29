@@ -17,7 +17,7 @@ export default function ContactInfo() {
       <div className="space-y-6">
         {/* Email */}
         <a
-          href="mailto:your.email@example.com"
+          href="mailto:marvindcruzjr@gmail.com"
           className="flex items-start space-x-4 p-4 rounded-lg hover:bg-gray-50 transition-colors group"
         >
           <div className="flex-shrink-0">
@@ -27,14 +27,14 @@ export default function ContactInfo() {
           </div>
           <div>
             <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-            <p className="text-gray-600">your.email@example.com</p>
+            <p className="text-gray-600">marvindcruzjr@gmail.com</p>
             <p className="text-sm text-gray-500 mt-1">Best for detailed inquiries</p>
           </div>
         </a>
 
         {/* Phone */}
         <a
-          href="tel:+11234567890"
+          href="tel:+13054847595"
           className="flex items-start space-x-4 p-4 rounded-lg hover:bg-gray-50 transition-colors group"
         >
           <div className="flex-shrink-0">
@@ -44,14 +44,14 @@ export default function ContactInfo() {
           </div>
           <div>
             <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-            <p className="text-gray-600">(123) 456-7890</p>
+            <p className="text-gray-600">(305) 484-7595</p>
             <p className="text-sm text-gray-500 mt-1">Mon-Fri, 9am-6pm</p>
           </div>
         </a>
 
         {/* Text/SMS */}
         <a
-          href="sms:+11234567890"
+          href="sms:+13054847595"
           className="flex items-start space-x-4 p-4 rounded-lg hover:bg-gray-50 transition-colors group"
         >
           <div className="flex-shrink-0">
@@ -61,7 +61,7 @@ export default function ContactInfo() {
           </div>
           <div>
             <h3 className="font-semibold text-gray-900 mb-1">Text Message</h3>
-            <p className="text-gray-600">(123) 456-7890</p>
+            <p className="text-gray-600">(305) 484-7595</p>
             <p className="text-sm text-gray-500 mt-1">Quick questions welcome</p>
           </div>
         </a>
@@ -84,7 +84,7 @@ export default function ContactInfo() {
           <div>
             <h3 className="font-semibold text-gray-900 mb-1">Service Area</h3>
             <p className="text-gray-600 text-sm">
-              Based in [Your City], serving [Your Region]
+              Based in Miami, serving South Florida
             </p>
           </div>
         </div>
@@ -96,7 +96,7 @@ export default function ContactInfo() {
           "I typically respond within a few hours during business hours. Looking
           forward to hearing about your project!"
         </p>
-        <p className="text-sm font-medium text-gray-900 mt-2">- Your Name</p>
+        <p className="text-sm font-medium text-gray-900 mt-2">- Marvin Cruz</p>
       </div>
     </div>
   );

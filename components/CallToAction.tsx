@@ -19,10 +19,10 @@ export default function CallToAction() {
             Get in Touch
           </Link>
           <a
-            href="tel:+11234567890"
+            href="tel:+13054847595"
             className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-medium hover:bg-white/10 transition-colors"
           >
-            Call Now: (123) 456-7890
+            Call Now: (305) 484-7595
           </a>
         </div>
         <p className="mt-8 text-sm text-gray-400">

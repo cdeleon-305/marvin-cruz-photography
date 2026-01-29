@@ -19,33 +19,33 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "Photography Portfolio | Professional Photographer",
-    template: "%s | Photography Portfolio",
+    default: "Marvin Cruz Photography | Miami Sports & Engagement Photographer",
+    template: "%s | Marvin Cruz Photography",
   },
-  description: "Professional photography services specializing in sports events, engagements, and personal shoots. View portfolio and book your session today.",
-  keywords: ["photography", "photographer", "sports photography", "engagement photography", "portrait photography", "professional photographer"],
-  authors: [{ name: "Your Name" }],
-  creator: "Your Name",
+  description: "Professional photography services by Marvin Cruz specializing in sports events, engagements, and personal shoots in Miami and South Florida. View portfolio and book your session today.",
+  keywords: ["photography", "photographer", "sports photography", "engagement photography", "portrait photography", "Miami photographer", "South Florida photographer", "Marvin Cruz"],
+  authors: [{ name: "Marvin Cruz" }],
+  creator: "Marvin Cruz",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://yoursite.com",
-    siteName: "Photography Portfolio",
-    title: "Professional Photography Services",
-    description: "Specializing in sports, engagements, and personal shoots",
+    url: "https://marvin-cruz-photography.vercel.app",
+    siteName: "Marvin Cruz Photography",
+    title: "Marvin Cruz Photography | Miami Sports & Engagement Photographer",
+    description: "Professional photography specializing in sports, engagements, and personal shoots in Miami",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Photography Portfolio",
+        alt: "Marvin Cruz Photography Portfolio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Professional Photography Services",
-    description: "Specializing in sports, engagements, and personal shoots",
+    title: "Marvin Cruz Photography | Miami Photographer",
+    description: "Professional photography specializing in sports, engagements, and personal shoots",
     images: ["/og-image.jpg"],
   },
   robots: {
