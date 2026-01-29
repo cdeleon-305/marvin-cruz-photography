@@ -26,7 +26,7 @@ export function middleware(request: NextRequest) {
     response.cookies.set('site-auth', password, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
-      maxAge: 60 * 60 * 24 * 7, // 7 days
+      maxAge: 60 * 60, // 1 hour
     });
     return response;
   }
@@ -37,8 +37,10 @@ export function middleware(request: NextRequest) {
     <!DOCTYPE html>
     <html>
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Access Required</title>
         <style>
+          * { box-sizing: border-box; }
           body {
             font-family: system-ui, -apple-system, sans-serif;
             display: flex;
@@ -48,25 +50,55 @@ export function middleware(request: NextRequest) {
             margin: 0;
             background: #111;
             color: white;
+            padding: 1rem;
           }
           .container {
             text-align: center;
             max-width: 400px;
+            width: 100%;
             padding: 2rem;
           }
-          h1 { margin-bottom: 1rem; }
-          p { color: #999; margin-bottom: 2rem; }
+          h1 {
+            margin-bottom: 1rem;
+            font-size: clamp(1.5rem, 5vw, 2rem);
+          }
+          p {
+            color: #999;
+            margin-bottom: 2rem;
+            font-size: clamp(0.875rem, 3vw, 1rem);
+          }
+          .input-wrapper {
+            position: relative;
+            margin-bottom: 1rem;
+          }
           input {
             width: 100%;
-            padding: 0.75rem;
+            padding: 0.75rem 3rem 0.75rem 0.75rem;
             font-size: 1rem;
             border: 1px solid #333;
             border-radius: 0.5rem;
             background: #222;
             color: white;
-            margin-bottom: 1rem;
           }
-          button {
+          input:focus {
+            outline: none;
+            border-color: #0070f3;
+          }
+          .toggle-password {
+            position: absolute;
+            right: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #999;
+            cursor: pointer;
+            padding: 0.5rem;
+            font-size: 0.875rem;
+            width: auto;
+          }
+          .toggle-password:hover { color: white; }
+          button[type="submit"] {
             width: 100%;
             padding: 0.75rem;
             font-size: 1rem;
@@ -75,8 +107,12 @@ export function middleware(request: NextRequest) {
             border: none;
             border-radius: 0.5rem;
             cursor: pointer;
+            transition: background 0.2s;
           }
-          button:hover { background: #0051cc; }
+          button[type="submit"]:hover { background: #0051cc; }
+          @media (max-width: 480px) {
+            .container { padding: 1.5rem; }
+          }
         </style>
       </head>
       <body>
@@ -84,10 +120,38 @@ export function middleware(request: NextRequest) {
           <h1>🔒 Private Site</h1>
           <p>This site is currently private. Enter the password to continue.</p>
           <form method="GET">
-            <input type="password" name="password" placeholder="Enter password" required />
+            <div class="input-wrapper">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Enter password"
+                required
+              />
+              <button
+                type="button"
+                class="toggle-password"
+                onclick="togglePassword()"
+              >
+                Show
+              </button>
+            </div>
             <button type="submit">Access Site</button>
           </form>
         </div>
+        <script>
+          function togglePassword() {
+            const input = document.getElementById('password');
+            const button = event.target;
+            if (input.type === 'password') {
+              input.type = 'text';
+              button.textContent = 'Hide';
+            } else {
+              input.type = 'password';
+              button.textContent = 'Show';
+            }
+          }
+        </script>
       </body>
     </html>
     `,
