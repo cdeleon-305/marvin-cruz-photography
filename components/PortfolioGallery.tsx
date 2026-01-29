@@ -9,10 +9,10 @@ const portfolioImages = [
   { id: 1, src: "/images/sports-1.jpg", alt: "Sports event photo 1", category: "events" },
   { id: 2, src: "/images/sports-2.jpg", alt: "Sports event photo 2", category: "events" },
   { id: 3, src: "/images/sports-3.jpg", alt: "Corporate event photo 1", category: "events" },
-  { id: 4, src: "/images/sports-4.jpg", alt: "Wedding photo 1", category: "events" },
-  { id: 5, src: "/images/engagement-1.jpg", alt: "Engagement photo 1", category: "events" },
-  { id: 6, src: "/images/engagement-2.jpg", alt: "Engagement photo 2", category: "events" },
-  { id: 7, src: "/images/engagement-3.jpg", alt: "Wedding photo 2", category: "events" },
+  { id: 4, src: "/images/sports-4.jpg", alt: "Wedding photo 1", category: "weddings" },
+  { id: 5, src: "/images/engagement-1.jpg", alt: "Engagement photo 1", category: "weddings" },
+  { id: 6, src: "/images/engagement-2.jpg", alt: "Engagement photo 2", category: "weddings" },
+  { id: 7, src: "/images/engagement-3.jpg", alt: "Wedding photo 2", category: "weddings" },
   { id: 8, src: "/images/engagement-4.jpg", alt: "Corporate event photo 2", category: "events" },
   { id: 9, src: "/images/personal-1.jpg", alt: "Portrait photo 1", category: "portraits" },
   { id: 10, src: "/images/personal-2.jpg", alt: "Portrait photo 2", category: "portraits" },
@@ -22,7 +22,8 @@ const portfolioImages = [
 
 const categories = [
   { id: "all", label: "All Work" },
-  { id: "events", label: "Sporting, Corporate, Wedding & Engagements" },
+  { id: "events", label: "Events" },
+  { id: "weddings", label: "Wedding and Engagements" },
   { id: "portraits", label: "Portraits" },
 ];
 
