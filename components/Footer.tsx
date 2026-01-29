@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FiInstagram, FiFacebook, FiMail, FiPhone } from "react-icons/fi";
+import { FiInstagram, FiMail, FiPhone } from "react-icons/fi";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -77,15 +77,6 @@ export default function Footer() {
                   aria-label="Instagram"
                 >
                   <FiInstagram className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://facebook.com/marvincruzphotography"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white transition-colors"
-                  aria-label="Facebook"
-                >
-                  <FiFacebook className="w-5 h-5" />
                 </a>
               </li>
             </ul>
