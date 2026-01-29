@@ -23,6 +23,10 @@ export const metadata: Metadata = {
     template: "%s | Marvin Cruz Photography",
   },
   description: "Miami-based professional photographer Marvin Cruz specializing in sporting events, corporate functions, weddings, engagements, and portraits. View portfolio and book your session today.",
+  icons: {
+    icon: "/images/headshot.jpg",
+    apple: "/images/headshot.jpg",
+  },
   keywords: ["photography", "photographer", "sports photography", "corporate photography", "wedding photography", "engagement photography", "portrait photography", "Miami photographer", "South Florida photographer", "Marvin Cruz"],
   authors: [{ name: "Marvin Cruz" }],
   creator: "Marvin Cruz",
