@@ -1,4 +1,4 @@
-import { FiMail, FiPhone, FiMessageSquare, FiClock, FiMapPin } from "react-icons/fi";
+import { FiMail, FiClock, FiMapPin } from "react-icons/fi";
 
 export default function ContactInfo() {
   return (
@@ -28,41 +28,7 @@ export default function ContactInfo() {
           <div>
             <h3 className="font-semibold text-white mb-1">Email</h3>
             <p className="text-gray-200">marvindcruzjr@gmail.com</p>
-            <p className="text-sm text-gray-400 mt-1">Best for detailed inquiries</p>
-          </div>
-        </a>
-
-        {/* Phone */}
-        <a
-          href="tel:+13054847595"
-          className="flex items-start space-x-4 p-4 rounded-lg hover:bg-gray-50/5 transition-colors group"
-        >
-          <div className="flex-shrink-0">
-            <div className="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center group-hover:bg-gray-800 transition-colors">
-              <FiPhone className="w-5 h-5" />
-            </div>
-          </div>
-          <div>
-            <h3 className="font-semibold text-white mb-1">Phone</h3>
-            <p className="text-gray-200">(305) 484-7595</p>
-            <p className="text-sm text-gray-400 mt-1">Mon-Fri, 9am-6pm</p>
-          </div>
-        </a>
-
-        {/* Text/SMS */}
-        <a
-          href="sms:+13054847595"
-          className="flex items-start space-x-4 p-4 rounded-lg hover:bg-gray-50/5 transition-colors group"
-        >
-          <div className="flex-shrink-0">
-            <div className="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center group-hover:bg-gray-800 transition-colors">
-              <FiMessageSquare className="w-5 h-5" />
-            </div>
-          </div>
-          <div>
-            <h3 className="font-semibold text-white mb-1">Text Message</h3>
-            <p className="text-gray-200">(305) 484-7595</p>
-            <p className="text-sm text-gray-400 mt-1">Quick questions welcome</p>
+            <p className="text-sm text-gray-400 mt-1">Best way to reach me</p>
           </div>
         </a>
       </div>

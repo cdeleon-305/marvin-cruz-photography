@@ -6,7 +6,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, email, phone, serviceType, message } = body;
+    const { name, email, serviceType, message } = body;
 
     // Validate required fields
     if (!name || !email || !serviceType || !message) {
@@ -36,7 +36,6 @@ export async function POST(request: Request) {
           <h2>New Contact Form Submission</h2>
           <p><strong>Name:</strong> ${name}</p>
           <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Phone:</strong> ${phone || "Not provided"}</p>
           <p><strong>Service Type:</strong> ${serviceType}</p>
           <p><strong>Message:</strong></p>
           <p>${message}</p>
