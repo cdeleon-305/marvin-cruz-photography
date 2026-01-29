@@ -14,9 +14,9 @@ export default function Footer() {
               About
             </h3>
             <p className="text-sm leading-relaxed">
-              Professional photographer specializing in sports events,
-              engagements, and personal shoots. Capturing your most
-              memorable moments with creativity and passion.
+              Miami-based professional photographer specializing in sporting
+              events, corporate functions, weddings, engagements, and portraits.
+              Bringing your most memorable moments to life with creativity and passion.
             </p>
           </div>
 

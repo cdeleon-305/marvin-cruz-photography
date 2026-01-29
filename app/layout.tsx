@@ -22,8 +22,8 @@ export const metadata: Metadata = {
     default: "Marvin Cruz Photography | Miami Sports & Engagement Photographer",
     template: "%s | Marvin Cruz Photography",
   },
-  description: "Professional photography services by Marvin Cruz specializing in sports events, engagements, and personal shoots in Miami and South Florida. View portfolio and book your session today.",
-  keywords: ["photography", "photographer", "sports photography", "engagement photography", "portrait photography", "Miami photographer", "South Florida photographer", "Marvin Cruz"],
+  description: "Miami-based professional photographer Marvin Cruz specializing in sporting events, corporate functions, weddings, engagements, and portraits. View portfolio and book your session today.",
+  keywords: ["photography", "photographer", "sports photography", "corporate photography", "wedding photography", "engagement photography", "portrait photography", "Miami photographer", "South Florida photographer", "Marvin Cruz"],
   authors: [{ name: "Marvin Cruz" }],
   creator: "Marvin Cruz",
   openGraph: {
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://marvin-cruz-photography.vercel.app",
     siteName: "Marvin Cruz Photography",
-    title: "Marvin Cruz Photography | Miami Sports & Engagement Photographer",
-    description: "Professional photography specializing in sports, engagements, and personal shoots in Miami",
+    title: "Marvin Cruz Photography | Miami Professional Photographer",
+    description: "Specializing in sporting events, corporate functions, weddings, engagements, and portraits in Miami",
     images: [
       {
         url: "/og-image.jpg",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Marvin Cruz Photography | Miami Photographer",
-    description: "Professional photography specializing in sports, engagements, and personal shoots",
+    description: "Specializing in sporting events, corporate functions, weddings, engagements, and portraits",
     images: ["/og-image.jpg"],
   },
   robots: {
