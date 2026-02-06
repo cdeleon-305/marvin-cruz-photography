@@ -36,10 +36,14 @@ const portfolioImages = [
   { id: 28, src: "/images/portrait-10.jpg", alt: "Portrait photo", category: "portraits" },
   { id: 29, src: "/images/portrait-11.jpg", alt: "Portrait photo", category: "portraits" },
   { id: 30, src: "/images/portrait-12.jpg", alt: "Portrait photo", category: "portraits" },
-  { id: 31, src: "/images/sports-1.jpg", alt: "Sports photo", category: "sports" },
-  { id: 32, src: "/images/sports-2.jpg", alt: "Sports photo", category: "sports" },
-  { id: 33, src: "/images/sports-3.jpg", alt: "Sports photo", category: "sports" },
-  { id: 34, src: "/images/sports-4.jpg", alt: "Sports photo", category: "sports" },
+  { id: 31, src: "/images/sports-new-1.jpg", alt: "Orange Bowl Basketball Classic 2023", category: "sports" },
+  { id: 32, src: "/images/sports-new-2.jpg", alt: "Orange Bowl Basketball Classic 2023", category: "sports" },
+  { id: 33, src: "/images/sports-new-3.jpg", alt: "Basketball action shot", category: "sports" },
+  { id: 34, src: "/images/sports-new-4.jpg", alt: "Formula 1 race car", category: "sports" },
+  { id: 35, src: "/images/sports-new-5.jpg", alt: "Dolphins Cancer Challenge at Miami International Autodrome", category: "sports" },
+  { id: 36, src: "/images/sports-new-6.jpg", alt: "Fireworks at the National Championship at Hard Rock Stadium", category: "sports" },
+  { id: 37, src: "/images/sports-new-7.jpg", alt: "Fan at the National Championship 2026 at Hard Rock Stadium", category: "sports" },
+  { id: 38, src: "/images/sports-new-8.jpg", alt: "National Championship 2026 game action at Hard Rock Stadium", category: "sports" },
 ];
 
 const categories = [

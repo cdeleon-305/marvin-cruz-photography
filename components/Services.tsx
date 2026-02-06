@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FiTrendingUp, FiHeart, FiUser } from "react-icons/fi";
+import { FiTrendingUp, FiHeart, FiUser, FiActivity } from "react-icons/fi";
 
 const services = [
   {
@@ -24,6 +24,13 @@ const services = [
     image: "/images/portrait-4.jpg",
     href: "/portfolio?category=portraits",
   },
+  {
+    title: "Sporting Events",
+    description: "Dynamic action shots capturing the intensity, energy, and unforgettable moments of live sporting events.",
+    icon: FiActivity,
+    image: "/images/sports-new-3.jpg",
+    href: "/portfolio?category=sports",
+  },
 ];
 
 export default function Services() {
@@ -42,7 +49,7 @@ export default function Services() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service) => (
             <Link
               key={service.title}
@@ -56,7 +63,7 @@ export default function Services() {
                   alt={service.title}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-300"
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               </div>

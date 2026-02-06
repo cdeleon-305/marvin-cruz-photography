@@ -9,12 +9,16 @@ const images = [
     alt: "Wedding and engagement photography"
   },
   {
-    src: "/images/hero.jpg",
-    alt: "Professional photography showcase"
+    src: "/images/carousel-fireworks.jpg",
+    alt: "Fireworks at the National Championship at Hard Rock Stadium"
   },
   {
-    src: "/images/carousel-1.jpg",
-    alt: "National Championship 2026 at Hard Rock Stadium"
+    src: "/images/carousel-mcdaniel.jpg",
+    alt: "Coach McDaniel at Hard Rock Stadium"
+  },
+  {
+    src: "/images/carousel-fans.jpg",
+    alt: "Formula 1 Miami Grand Prix"
   },
 ];
 
