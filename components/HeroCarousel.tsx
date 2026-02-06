@@ -14,7 +14,7 @@ const images = [
   },
   {
     src: "/images/carousel-2.jpg",
-    alt: "Professional photography"
+    alt: "Wedding and engagement photography"
   }
 ];
 

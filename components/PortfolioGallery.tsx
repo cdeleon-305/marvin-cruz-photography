@@ -19,12 +19,14 @@ const portfolioImages = [
   { id: 11, src: "/images/events-11.jpg", alt: "Dolphins Cancer Challenge 2025 - AutoNation DRV PNK", category: "events" },
   { id: 12, src: "/images/events-12.jpg", alt: "AutoNation DRV PNK x DCC 2025 at Hard Rock Stadium", category: "events" },
   { id: 13, src: "/images/events-13.jpg", alt: "Corporate event photo", category: "events" },
-  { id: 14, src: "/images/sports-4.jpg", alt: "Wedding photo 1", category: "weddings" },
-  { id: 15, src: "/images/engagement-1.jpg", alt: "Engagement photo 1", category: "weddings" },
-  { id: 16, src: "/images/engagement-2.jpg", alt: "Engagement photo 2", category: "weddings" },
-  { id: 17, src: "/images/personal-1.jpg", alt: "Portrait photo 1", category: "portraits" },
-  { id: 18, src: "/images/personal-2.jpg", alt: "Portrait photo 2", category: "portraits" },
-  { id: 19, src: "/images/personal-3.jpg", alt: "Portrait photo 3", category: "portraits" },
+  { id: 14, src: "/images/wedding-1.jpg", alt: "Wedding photo", category: "weddings" },
+  { id: 15, src: "/images/wedding-2.jpg", alt: "Wedding and engagement photo", category: "weddings" },
+  { id: 16, src: "/images/wedding-3.jpg", alt: "Wedding and engagement photo", category: "weddings" },
+  { id: 17, src: "/images/wedding-4.jpg", alt: "Wedding and engagement photo", category: "weddings" },
+  { id: 18, src: "/images/wedding-5.jpg", alt: "Wedding and engagement photo", category: "weddings" },
+  { id: 19, src: "/images/personal-1.jpg", alt: "Portrait photo 1", category: "portraits" },
+  { id: 20, src: "/images/personal-2.jpg", alt: "Portrait photo 2", category: "portraits" },
+  { id: 21, src: "/images/personal-3.jpg", alt: "Portrait photo 3", category: "portraits" },
 ];
 
 const categories = [
