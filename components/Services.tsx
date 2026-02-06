@@ -14,14 +14,14 @@ const services = [
     title: "Weddings & Engagements",
     description: "Romantic and authentic moments celebrating your love story. Beautiful imagery perfect for your most memorable occasions.",
     icon: FiHeart,
-    image: "/images/engagement-preview.jpg",
-    href: "/portfolio?category=events",
+    image: "/images/wedding-1.jpg",
+    href: "/portfolio?category=weddings",
   },
   {
     title: "Portrait Photography",
     description: "Professional portraits, family photos, and lifestyle sessions. Capture your personality and create lasting memories.",
     icon: FiUser,
-    image: "/images/personal-preview.jpg",
+    image: "/images/portrait-4.jpg",
     href: "/portfolio?category=portraits",
   },
 ];

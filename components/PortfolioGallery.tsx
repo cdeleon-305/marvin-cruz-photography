@@ -24,16 +24,30 @@ const portfolioImages = [
   { id: 16, src: "/images/wedding-3.jpg", alt: "Wedding and engagement photo", category: "weddings" },
   { id: 17, src: "/images/wedding-4.jpg", alt: "Wedding and engagement photo", category: "weddings" },
   { id: 18, src: "/images/wedding-5.jpg", alt: "Wedding and engagement photo", category: "weddings" },
-  { id: 19, src: "/images/personal-1.jpg", alt: "Portrait photo 1", category: "portraits" },
-  { id: 20, src: "/images/personal-2.jpg", alt: "Portrait photo 2", category: "portraits" },
-  { id: 21, src: "/images/personal-3.jpg", alt: "Portrait photo 3", category: "portraits" },
+  { id: 19, src: "/images/portrait-1.jpg", alt: "Portrait photo", category: "portraits" },
+  { id: 20, src: "/images/portrait-2.jpg", alt: "Portrait photo", category: "portraits" },
+  { id: 21, src: "/images/portrait-3.jpg", alt: "Portrait photo", category: "portraits" },
+  { id: 22, src: "/images/portrait-4.jpg", alt: "Portrait photo", category: "portraits" },
+  { id: 23, src: "/images/portrait-5.jpg", alt: "Portrait photo", category: "portraits" },
+  { id: 24, src: "/images/portrait-6.jpg", alt: "Portrait photo", category: "portraits" },
+  { id: 25, src: "/images/portrait-7.jpg", alt: "Portrait photo", category: "portraits" },
+  { id: 26, src: "/images/portrait-8.jpg", alt: "Portrait photo", category: "portraits" },
+  { id: 27, src: "/images/portrait-9.jpg", alt: "Portrait photo", category: "portraits" },
+  { id: 28, src: "/images/portrait-10.jpg", alt: "Portrait photo", category: "portraits" },
+  { id: 29, src: "/images/portrait-11.jpg", alt: "Portrait photo", category: "portraits" },
+  { id: 30, src: "/images/portrait-12.jpg", alt: "Portrait photo", category: "portraits" },
+  { id: 31, src: "/images/sports-1.jpg", alt: "Sports photo", category: "sports" },
+  { id: 32, src: "/images/sports-2.jpg", alt: "Sports photo", category: "sports" },
+  { id: 33, src: "/images/sports-3.jpg", alt: "Sports photo", category: "sports" },
+  { id: 34, src: "/images/sports-4.jpg", alt: "Sports photo", category: "sports" },
 ];
 
 const categories = [
   { id: "all", label: "All Work" },
-  { id: "events", label: "Events" },
-  { id: "weddings", label: "Wedding and Engagements" },
+  { id: "events", label: "Corporate Events" },
+  { id: "weddings", label: "Weddings & Engagements" },
   { id: "portraits", label: "Portraits" },
+  { id: "sports", label: "Sports" },
 ];
 
 export default function PortfolioGallery() {
