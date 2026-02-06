@@ -5,6 +5,10 @@ import Image from "next/image";
 
 const images = [
   {
+    src: "/images/carousel-2.jpg",
+    alt: "Wedding and engagement photography"
+  },
+  {
     src: "/images/hero.jpg",
     alt: "Professional photography showcase"
   },
@@ -12,10 +16,6 @@ const images = [
     src: "/images/carousel-1.jpg",
     alt: "National Championship 2026 at Hard Rock Stadium"
   },
-  {
-    src: "/images/carousel-2.jpg",
-    alt: "Wedding and engagement photography"
-  }
 ];
 
 export default function HeroCarousel() {
