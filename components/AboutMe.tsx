@@ -32,14 +32,14 @@ export default function AboutMe() {
                 {/* Your story here - replace this placeholder text */}
                 I'm Marvin Cruz, a Miami-based professional photographer with a passion
                 for capturing life's most meaningful moments. With years of experience
-                in sports, corporate events, weddings, and portrait photography, I bring
+                in corporate events, weddings, and portrait photography, I bring
                 creativity, technical expertise, and an eye for detail to every shoot.
               </p>
 
               <p>
                 My approach is simple: tell your story authentically. Whether it's the
-                intensity of a sporting event, the emotion of a wedding day, the
-                professionalism of a corporate function, or the personality in a portrait,
+                energy of a corporate event, the emotion of a wedding day, or the
+                personality in a portrait,
                 I'm dedicated to creating images that resonate.
               </p>
 

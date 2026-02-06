@@ -7,7 +7,7 @@ const featuredImages = [
     id: 1,
     src: "/images/featured-1.jpg",
     alt: "Featured photography work 1",
-    category: "Sports",
+    category: "Corporate",
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const featuredImages = [
     id: 4,
     src: "/images/featured-4.jpg",
     alt: "Featured photography work 4",
-    category: "Sports",
+    category: "Corporate",
   },
   {
     id: 5,

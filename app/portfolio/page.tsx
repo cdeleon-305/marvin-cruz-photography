@@ -4,7 +4,7 @@ import PortfolioGallery from "@/components/PortfolioGallery";
 
 export const metadata: Metadata = {
   title: "Portfolio",
-  description: "Browse my photography portfolio featuring sports events, engagement shoots, and personal photography sessions.",
+  description: "Browse my photography portfolio featuring corporate events, engagement shoots, and personal photography sessions.",
 };
 
 function PortfolioLoading() {

@@ -107,7 +107,6 @@ export default function ContactForm() {
             className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand focus:border-transparent transition-colors"
           >
             <option value="">Select a service</option>
-            <option value="sports">Sporting Event</option>
             <option value="corporate">Corporate Event</option>
             <option value="wedding">Wedding</option>
             <option value="engagement">Engagement</option>

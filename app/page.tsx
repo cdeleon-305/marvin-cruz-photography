@@ -6,7 +6,7 @@ import CallToAction from "@/components/CallToAction";
 
 export const metadata: Metadata = {
   title: "Marvin Cruz Photography",
-  description: "Professional photographer specializing in sports events, engagements, and personal shoots. View my portfolio and book your session today.",
+  description: "Professional photographer specializing in corporate events, engagements, and personal shoots. View my portfolio and book your session today.",
 };
 
 export default function Home() {

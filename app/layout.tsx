@@ -19,15 +19,15 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "Marvin Cruz Photography | Miami Sports & Engagement Photographer",
+    default: "Marvin Cruz Photography | Miami Corporate & Engagement Photographer",
     template: "%s | Marvin Cruz Photography",
   },
-  description: "Miami-based professional photographer Marvin Cruz specializing in sporting events, corporate functions, weddings, engagements, and portraits. View portfolio and book your session today.",
+  description: "Miami-based professional photographer Marvin Cruz specializing in corporate events, weddings, engagements, and portraits. View portfolio and book your session today.",
   icons: {
     icon: "/images/headshot.jpg",
     apple: "/images/headshot.jpg",
   },
-  keywords: ["photography", "photographer", "sports photography", "corporate photography", "wedding photography", "engagement photography", "portrait photography", "Miami photographer", "South Florida photographer", "Marvin Cruz"],
+  keywords: ["photography", "photographer", "corporate photography", "corporate event photography", "wedding photography", "engagement photography", "portrait photography", "Miami photographer", "South Florida photographer", "Marvin Cruz"],
   authors: [{ name: "Marvin Cruz" }],
   creator: "Marvin Cruz",
   openGraph: {
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     url: "https://marvin-cruz-photography.vercel.app",
     siteName: "Marvin Cruz Photography",
     title: "Marvin Cruz Photography | Miami Professional Photographer",
-    description: "Specializing in sporting events, corporate functions, weddings, engagements, and portraits in Miami",
+    description: "Specializing in corporate events, weddings, engagements, and portraits in Miami",
     images: [
       {
         url: "/og-image.jpg",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Marvin Cruz Photography | Miami Photographer",
-    description: "Specializing in sporting events, corporate functions, weddings, engagements, and portraits",
+    description: "Specializing in corporate events, weddings, engagements, and portraits",
     images: ["/og-image.jpg"],
   },
   robots: {

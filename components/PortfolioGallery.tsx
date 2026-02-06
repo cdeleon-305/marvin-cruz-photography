@@ -6,15 +6,25 @@ import { useSearchParams } from "next/navigation";
 
 // Sample portfolio data - replace with actual images
 const portfolioImages = [
-  { id: 1, src: "/images/sports-1.jpg", alt: "Sports event photo 1", category: "events" },
-  { id: 2, src: "/images/sports-2.jpg", alt: "Sports event photo 2", category: "events" },
-  { id: 3, src: "/images/sports-3.jpg", alt: "Corporate event photo 1", category: "events" },
-  { id: 4, src: "/images/sports-4.jpg", alt: "Wedding photo 1", category: "weddings" },
-  { id: 5, src: "/images/engagement-1.jpg", alt: "Engagement photo 1", category: "weddings" },
-  { id: 6, src: "/images/engagement-2.jpg", alt: "Engagement photo 2", category: "weddings" },
-  { id: 9, src: "/images/personal-1.jpg", alt: "Portrait photo 1", category: "portraits" },
-  { id: 10, src: "/images/personal-2.jpg", alt: "Portrait photo 2", category: "portraits" },
-  { id: 11, src: "/images/personal-3.jpg", alt: "Portrait photo 3", category: "portraits" },
+  { id: 1, src: "/images/events-1.jpg", alt: "Corporate headshot", category: "events" },
+  { id: 2, src: "/images/events-2.jpg", alt: "Corporate headshot", category: "events" },
+  { id: 3, src: "/images/events-3.jpg", alt: "AutoNation DRV PNK x DCC 2025 at Hard Rock Stadium", category: "events" },
+  { id: 4, src: "/images/events-4.jpg", alt: "2025 Formula 1 Miami Grand Prix - AutoNation Sponsorship", category: "events" },
+  { id: 5, src: "/images/events-5.jpg", alt: "2025 Formula 1 Miami Grand Prix - AutoNation Sponsorship", category: "events" },
+  { id: 6, src: "/images/events-6.jpg", alt: "Alex's Place Toy Drive 2025 - DRV PNK", category: "events" },
+  { id: 7, src: "/images/events-7.jpg", alt: "Alex's Place Toy Drive 2025 - DRV PNK", category: "events" },
+  { id: 8, src: "/images/events-8.jpg", alt: "Corporate event photo", category: "events" },
+  { id: 9, src: "/images/events-9.jpg", alt: "Corporate event photo", category: "events" },
+  { id: 10, src: "/images/events-10.jpg", alt: "Corporate event photo", category: "events" },
+  { id: 11, src: "/images/events-11.jpg", alt: "Dolphins Cancer Challenge 2025 - AutoNation DRV PNK", category: "events" },
+  { id: 12, src: "/images/events-12.jpg", alt: "AutoNation DRV PNK x DCC 2025 at Hard Rock Stadium", category: "events" },
+  { id: 13, src: "/images/events-13.jpg", alt: "Corporate event photo", category: "events" },
+  { id: 14, src: "/images/sports-4.jpg", alt: "Wedding photo 1", category: "weddings" },
+  { id: 15, src: "/images/engagement-1.jpg", alt: "Engagement photo 1", category: "weddings" },
+  { id: 16, src: "/images/engagement-2.jpg", alt: "Engagement photo 2", category: "weddings" },
+  { id: 17, src: "/images/personal-1.jpg", alt: "Portrait photo 1", category: "portraits" },
+  { id: 18, src: "/images/personal-2.jpg", alt: "Portrait photo 2", category: "portraits" },
+  { id: 19, src: "/images/personal-3.jpg", alt: "Portrait photo 3", category: "portraits" },
 ];
 
 const categories = [

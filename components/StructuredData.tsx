@@ -36,7 +36,6 @@ export default function StructuredData() {
     ],
     "priceRange": "$$",
     "serviceType": [
-      "Sports Photography",
       "Corporate Event Photography",
       "Wedding Photography",
       "Engagement Photography",

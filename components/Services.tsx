@@ -4,10 +4,10 @@ import { FiTrendingUp, FiHeart, FiUser } from "react-icons/fi";
 
 const services = [
   {
-    title: "Sporting & Corporate Events",
-    description: "Dynamic action shots and professional corporate event coverage capturing the intensity, emotion, and key moments of your events.",
+    title: "Corporate Events",
+    description: "Professional corporate event coverage capturing the energy, emotion, and key moments of your events.",
     icon: FiTrendingUp,
-    image: "/images/sports-preview.jpg",
+    image: "/images/events-3.jpg",
     href: "/portfolio?category=events",
   },
   {
@@ -36,7 +36,7 @@ export default function Services() {
             What I Specialize In
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            From high-energy sports action to intimate personal moments, I bring
+            From corporate events to intimate personal moments, I bring
             passion and expertise to every shoot
           </p>
         </div>
