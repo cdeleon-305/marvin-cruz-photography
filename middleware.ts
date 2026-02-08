@@ -2,6 +2,11 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
+  // If no password is configured, allow public access
+  if (!process.env.SITE_PASSWORD) {
+    return NextResponse.next();
+  }
+
   // Skip auth check for API routes and static files
   if (
     request.nextUrl.pathname.startsWith('/api') ||
