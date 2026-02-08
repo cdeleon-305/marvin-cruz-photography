@@ -19,10 +19,10 @@ export default function CallToAction() {
             Get in Touch
           </Link>
           <a
-            href="tel:+13054847595"
+            href="mailto:marvindcruzjr@gmail.com"
             className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-medium hover:bg-white/10 transition-colors"
           >
-            Call Now: (305) 484-7595
+            Email Me
           </a>
         </div>
         <p className="mt-8 text-sm text-gray-400">

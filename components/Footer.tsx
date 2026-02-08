@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FiInstagram, FiMail, FiPhone } from "react-icons/fi";
+import { FiInstagram, FiMail } from "react-icons/fi";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -59,16 +59,7 @@ export default function Footer() {
                   <span>marvindcruzjr@gmail.com</span>
                 </a>
               </li>
-              <li>
-                <a
-                  href="tel:+13054847595"
-                  className="flex items-center space-x-2 text-sm hover:text-white transition-colors"
-                >
-                  <FiPhone className="w-4 h-4" />
-                  <span>(305) 484-7595</span>
-                </a>
-              </li>
-              <li className="flex items-center space-x-4 pt-2">
+<li className="flex items-center space-x-4 pt-2">
                 <a
                   href="https://instagram.com/marvincruzphotography"
                   target="_blank"

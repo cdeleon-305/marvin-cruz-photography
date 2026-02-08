@@ -6,7 +6,6 @@ export default function StructuredData() {
     "image": "https://marvin-cruz-photography.vercel.app/og-image.jpg",
     "@id": "https://marvin-cruz-photography.vercel.app",
     "url": "https://marvin-cruz-photography.vercel.app",
-    "telephone": "+13054847595",
     "email": "marvindcruzjr@gmail.com",
     "address": {
       "@type": "PostalAddress",
