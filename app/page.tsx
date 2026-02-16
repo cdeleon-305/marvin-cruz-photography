@@ -5,8 +5,8 @@ import AboutMe from "@/components/AboutMe";
 import CallToAction from "@/components/CallToAction";
 
 export const metadata: Metadata = {
-  title: "Marvin Cruz Photography",
-  description: "Professional photographer specializing in corporate events, engagements, and personal shoots. View my portfolio and book your session today.",
+  title: "Marvin Cruz Photography | South Florida Photographer",
+  description: "South Florida professional photographer specializing in corporate events, weddings, engagements, and portraits. Serving Miami, Fort Lauderdale, and Palm Beach. View my portfolio and book your session today.",
 };
 
 export default function Home() {

@@ -3,8 +3,8 @@ import { Suspense } from "react";
 import PortfolioGallery from "@/components/PortfolioGallery";
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Browse my photography portfolio featuring corporate events, engagement shoots, and personal photography sessions.",
+  title: "Portfolio | South Florida Photography",
+  description: "Browse Marvin Cruz's photography portfolio featuring corporate events, weddings, engagement shoots, and portraits in Miami and South Florida.",
 };
 
 function PortfolioLoading() {

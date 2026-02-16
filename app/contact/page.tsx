@@ -3,8 +3,8 @@ import Image from "next/image";
 import ContactInfo from "@/components/ContactInfo";
 
 export const metadata: Metadata = {
-  title: "Contact",
-  description: "Get in touch to book your photography session. I typically respond within 24 hours.",
+  title: "Contact | Book a South Florida Photographer",
+  description: "Get in touch with Marvin Cruz Photography to book your photography session in Miami, Fort Lauderdale, or anywhere in South Florida. I typically respond within 24 hours.",
 };
 
 export default function Contact() {

@@ -19,16 +19,17 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://marvin-cruz-photography.vercel.app"),
   title: {
-    default: "Marvin Cruz Photography | Miami Corporate & Engagement Photographer",
+    default: "Marvin Cruz Photography | South Florida Corporate & Engagement Photographer",
     template: "%s | Marvin Cruz Photography",
   },
-  description: "Miami-based professional photographer Marvin Cruz specializing in corporate events, weddings, engagements, and portraits. View portfolio and book your session today.",
+  description: "South Florida professional photographer Marvin Cruz specializing in corporate events, weddings, engagements, and portraits in Miami, Fort Lauderdale, and Palm Beach. View portfolio and book your session today.",
   icons: {
     icon: "/images/headshot.jpg",
     apple: "/images/headshot.jpg",
   },
-  keywords: ["photography", "photographer", "corporate photography", "corporate event photography", "wedding photography", "engagement photography", "portrait photography", "Miami photographer", "South Florida photographer", "Marvin Cruz"],
+  keywords: ["photography", "photographer", "South Florida photographer", "Miami photographer", "Fort Lauderdale photographer", "Palm Beach photographer", "corporate photography", "corporate event photography", "wedding photography", "engagement photography", "portrait photography", "South Florida photography", "Miami photography", "Marvin Cruz"],
   authors: [{ name: "Marvin Cruz" }],
   creator: "Marvin Cruz",
   openGraph: {
@@ -36,8 +37,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://marvin-cruz-photography.vercel.app",
     siteName: "Marvin Cruz Photography",
-    title: "Marvin Cruz Photography | Miami Professional Photographer",
-    description: "Specializing in corporate events, weddings, engagements, and portraits in Miami",
+    title: "Marvin Cruz Photography | South Florida Professional Photographer",
+    description: "Specializing in corporate events, weddings, engagements, and portraits in Miami, Fort Lauderdale, and South Florida",
     images: [
       {
         url: "/og-image.jpg",
@@ -49,8 +50,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Marvin Cruz Photography | Miami Photographer",
-    description: "Specializing in corporate events, weddings, engagements, and portraits",
+    title: "Marvin Cruz Photography | South Florida Photographer",
+    description: "Specializing in corporate events, weddings, engagements, and portraits in South Florida",
     images: ["/og-image.jpg"],
   },
   robots: {
