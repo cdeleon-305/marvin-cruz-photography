@@ -3,9 +3,9 @@ export default function StructuredData() {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "ProfessionalService"],
     "name": "Marvin Cruz Photography",
-    "image": "https://marvin-cruz-photography.vercel.app/og-image.jpg",
-    "@id": "https://marvin-cruz-photography.vercel.app",
-    "url": "https://marvin-cruz-photography.vercel.app",
+    "image": "https://marvincruzphotography.com/og-image.jpg",
+    "@id": "https://marvincruzphotography.com",
+    "url": "https://marvincruzphotography.com",
     "email": "marvindcruzjr@gmail.com",
     "description": "Professional photographer in South Florida specializing in corporate events, weddings, engagements, and portraits. Serving Miami, Fort Lauderdale, and Palm Beach.",
     "address": {

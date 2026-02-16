@@ -19,7 +19,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://marvin-cruz-photography.vercel.app"),
+  metadataBase: new URL("https://marvincruzphotography.com"),
   title: {
     default: "Marvin Cruz Photography | South Florida Corporate & Engagement Photographer",
     template: "%s | Marvin Cruz Photography",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://marvin-cruz-photography.vercel.app",
+    url: "https://marvincruzphotography.com",
     siteName: "Marvin Cruz Photography",
     title: "Marvin Cruz Photography | South Florida Professional Photographer",
     description: "Specializing in corporate events, weddings, engagements, and portraits in Miami, Fort Lauderdale, and South Florida",
