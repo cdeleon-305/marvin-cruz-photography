@@ -6,6 +6,11 @@ import { useSearchParams } from "next/navigation";
 
 // Sample portfolio data - replace with actual images
 const portfolioImages = [
+  { id: 42, src: "/images/events-17.jpg", alt: "Tito's Handmade Vodka brand activation", category: "events" },
+  { id: 41, src: "/images/events-16.jpg", alt: "Aperol Spritz brand activation in Miami", category: "events" },
+  { id: 40, src: "/images/events-15.jpg", alt: "Dolphins Cancer Challenge medals", category: "events" },
+  { id: 39, src: "/images/events-14.jpg", alt: "Team AutoNation at Dolphins Cancer Challenge", category: "events" },
+  { id: 43, src: "/images/events-18.jpg", alt: "Cadillac brand activation", category: "events" },
   { id: 1, src: "/images/events-1.jpg", alt: "Corporate headshot", category: "events" },
   { id: 2, src: "/images/events-2.jpg", alt: "Corporate headshot", category: "events" },
   { id: 4, src: "/images/events-4.jpg", alt: "2025 Formula 1 Miami Grand Prix - AutoNation Sponsorship", category: "events" },
@@ -18,11 +23,6 @@ const portfolioImages = [
   { id: 11, src: "/images/events-11.jpg", alt: "Dolphins Cancer Challenge 2025 - AutoNation DRV PNK", category: "events" },
   { id: 12, src: "/images/events-12.jpg", alt: "AutoNation DRV PNK x DCC 2025 at Hard Rock Stadium", category: "events" },
   { id: 13, src: "/images/events-13.jpg", alt: "Corporate event photo", category: "events" },
-  { id: 39, src: "/images/events-14.jpg", alt: "Corporate event photo", category: "events" },
-  { id: 40, src: "/images/events-15.jpg", alt: "Corporate event photo", category: "events" },
-  { id: 41, src: "/images/events-16.jpg", alt: "Corporate event photo", category: "events" },
-  { id: 42, src: "/images/events-17.jpg", alt: "Corporate event photo", category: "events" },
-  { id: 43, src: "/images/events-18.jpg", alt: "Corporate event photo", category: "events" },
   { id: 14, src: "/images/wedding-1.jpg", alt: "Wedding photo", category: "weddings" },
   { id: 15, src: "/images/wedding-2.jpg", alt: "Wedding and engagement photo", category: "weddings" },
   { id: 16, src: "/images/wedding-3.jpg", alt: "Wedding and engagement photo", category: "weddings" },
