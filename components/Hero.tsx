@@ -1,12 +1,15 @@
 import Link from "next/link";
-import HeroCarousel from "./HeroCarousel";
+import { Suspense } from "react";
+import HeroCarouselWrapper from "./HeroCarouselWrapper";
 
 export default function Hero() {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Carousel */}
       <div className="absolute inset-0 z-0">
-        <HeroCarousel />
+        <Suspense fallback={<div className="w-full h-full bg-gray-900" />}>
+          <HeroCarouselWrapper />
+        </Suspense>
       </div>
 
       {/* Content */}

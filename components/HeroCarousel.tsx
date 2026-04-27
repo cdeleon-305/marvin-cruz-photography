@@ -2,47 +2,37 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import type { CarouselImage } from "@/lib/types";
 
-const images = [
-  {
-    src: "/images/carousel-2.jpg",
-    alt: "Wedding and engagement photography"
-  },
-  {
-    src: "/images/carousel-fireworks.jpg",
-    alt: "Fireworks at the National Championship at Hard Rock Stadium"
-  },
-  {
-    src: "/images/carousel-mcdaniel.jpg",
-    alt: "Coach McDaniel at Hard Rock Stadium"
-  },
-  {
-    src: "/images/carousel-fans.jpg",
-    alt: "Formula 1 Miami Grand Prix"
-  },
-];
+interface HeroCarouselProps {
+  images: CarouselImage[];
+}
 
-export default function HeroCarousel() {
+export default function HeroCarousel({ images }: HeroCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
+    if (images.length === 0) return;
+
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // Change image every 3 seconds
+    }, 3000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
   };
+
+  if (images.length === 0) return null;
 
   return (
     <div className="relative w-full h-full">
       {/* Carousel Images */}
       {images.map((image, index) => (
         <div
-          key={index}
+          key={image.id}
           className={`absolute inset-0 transition-opacity duration-1000 ${
             index === currentIndex ? "opacity-100" : "opacity-0"
           }`}

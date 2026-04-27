@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import PortfolioGallery from "@/components/PortfolioGallery";
+import PortfolioGalleryWrapper from "@/components/PortfolioGalleryWrapper";
+
+export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "Portfolio | South Florida Photography",
@@ -40,7 +42,7 @@ export default function Portfolio() {
         </div>
       </div>
       <Suspense fallback={<PortfolioLoading />}>
-        <PortfolioGallery />
+        <PortfolioGalleryWrapper />
       </Suspense>
     </div>
   );

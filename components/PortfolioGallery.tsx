@@ -3,48 +3,7 @@
 import { useState, useMemo } from "react";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
-
-// Sample portfolio data - replace with actual images
-const portfolioImages = [
-  { id: 42, src: "/images/events-17.jpg", alt: "Tito's Handmade Vodka brand activation", category: "events" },
-  { id: 41, src: "/images/events-16.jpg", alt: "Aperol Spritz brand activation in Miami", category: "events" },
-  { id: 40, src: "/images/events-15.jpg", alt: "Dolphins Cancer Challenge medals", category: "events" },
-  { id: 39, src: "/images/events-14.jpg", alt: "Team AutoNation at Dolphins Cancer Challenge", category: "events" },
-  { id: 43, src: "/images/events-18.jpg", alt: "Cadillac brand activation", category: "events" },
-  { id: 1, src: "/images/events-1.jpg", alt: "Corporate headshot", category: "events" },
-  { id: 2, src: "/images/events-2.jpg", alt: "Corporate headshot", category: "events" },
-  { id: 4, src: "/images/events-4.jpg", alt: "2025 Formula 1 Miami Grand Prix - AutoNation Sponsorship", category: "events" },
-  { id: 5, src: "/images/events-5.jpg", alt: "2025 Formula 1 Miami Grand Prix - AutoNation Sponsorship", category: "events" },
-  { id: 6, src: "/images/events-6.jpg", alt: "Alex's Place Toy Drive 2025 - DRV PNK", category: "events" },
-  { id: 7, src: "/images/events-7.jpg", alt: "Alex's Place Toy Drive 2025 - DRV PNK", category: "events" },
-  { id: 8, src: "/images/events-8.jpg", alt: "Corporate event photo", category: "events" },
-  { id: 9, src: "/images/events-9.jpg", alt: "Corporate event photo", category: "events" },
-  { id: 10, src: "/images/events-10.jpg", alt: "Corporate event photo", category: "events" },
-  { id: 11, src: "/images/events-11.jpg", alt: "Dolphins Cancer Challenge 2025 - AutoNation DRV PNK", category: "events" },
-  { id: 12, src: "/images/events-12.jpg", alt: "AutoNation DRV PNK x DCC 2025 at Hard Rock Stadium", category: "events" },
-  { id: 13, src: "/images/events-13.jpg", alt: "Corporate event photo", category: "events" },
-  { id: 14, src: "/images/wedding-1.jpg", alt: "Wedding photo", category: "weddings" },
-  { id: 15, src: "/images/wedding-2.jpg", alt: "Wedding and engagement photo", category: "weddings" },
-  { id: 16, src: "/images/wedding-3.jpg", alt: "Wedding and engagement photo", category: "weddings" },
-  { id: 17, src: "/images/wedding-4.jpg", alt: "Wedding and engagement photo", category: "weddings" },
-  { id: 18, src: "/images/wedding-5.jpg", alt: "Wedding and engagement photo", category: "weddings" },
-  { id: 19, src: "/images/portrait-1.jpg", alt: "Portrait photo", category: "portraits" },
-  { id: 20, src: "/images/portrait-2.jpg", alt: "Portrait photo", category: "portraits" },
-  { id: 21, src: "/images/portrait-3.jpg", alt: "Portrait photo", category: "portraits" },
-  { id: 22, src: "/images/portrait-4.jpg", alt: "Portrait photo", category: "portraits" },
-  { id: 24, src: "/images/portrait-6.jpg", alt: "Portrait photo", category: "portraits" },
-  { id: 26, src: "/images/portrait-8.jpg", alt: "Portrait photo", category: "portraits" },
-  { id: 27, src: "/images/portrait-9.jpg", alt: "Portrait photo", category: "portraits" },
-  { id: 30, src: "/images/portrait-12.jpg", alt: "Portrait photo", category: "portraits" },
-  { id: 31, src: "/images/sports-new-1.jpg", alt: "Orange Bowl Basketball Classic 2023", category: "sports" },
-  { id: 32, src: "/images/sports-new-2.jpg", alt: "Orange Bowl Basketball Classic 2023", category: "sports" },
-  { id: 33, src: "/images/sports-new-3.jpg", alt: "Basketball action shot", category: "sports" },
-  { id: 34, src: "/images/sports-new-4.jpg", alt: "Formula 1 race car", category: "sports" },
-  { id: 35, src: "/images/sports-new-5.jpg", alt: "Dolphins Cancer Challenge at Miami International Autodrome", category: "sports" },
-  { id: 36, src: "/images/sports-new-6.jpg", alt: "Fireworks at the National Championship at Hard Rock Stadium", category: "sports" },
-  { id: 37, src: "/images/sports-new-7.jpg", alt: "Fan at the National Championship 2026 at Hard Rock Stadium", category: "sports" },
-  { id: 38, src: "/images/sports-new-8.jpg", alt: "National Championship 2026 game action at Hard Rock Stadium", category: "sports" },
-];
+import type { PortfolioImage } from "@/lib/types";
 
 const categories = [
   { id: "all", label: "All Work" },
@@ -54,21 +13,25 @@ const categories = [
   { id: "sports", label: "Sports" },
 ];
 
-export default function PortfolioGallery() {
+interface PortfolioGalleryProps {
+  images: PortfolioImage[];
+}
+
+export default function PortfolioGallery({ images }: PortfolioGalleryProps) {
   const searchParams = useSearchParams();
   const categoryFromUrl = searchParams.get("category") || "all";
   const [selectedCategory, setSelectedCategory] = useState(categoryFromUrl);
-  const [lightboxImage, setLightboxImage] = useState<number | null>(null);
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
 
   // Filter images based on selected category
   const filteredImages = useMemo(() => {
     if (selectedCategory === "all") {
-      return portfolioImages;
+      return images;
     }
-    return portfolioImages.filter((img) => img.category === selectedCategory);
-  }, [selectedCategory]);
+    return images.filter((img) => img.category === selectedCategory);
+  }, [selectedCategory, images]);
 
-  const openLightbox = (imageId: number) => {
+  const openLightbox = (imageId: string) => {
     setLightboxImage(imageId);
   };
 
@@ -143,7 +106,7 @@ export default function PortfolioGallery() {
       </section>
 
       {/* Lightbox */}
-      {lightboxImage !== null && (
+      {lightboxImage !== null && currentImageIndex >= 0 && (
         <div
           className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center"
           onClick={closeLightbox}

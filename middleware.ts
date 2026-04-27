@@ -1,50 +1,13 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-export function middleware(request: NextRequest) {
-  // If no password is configured, allow public access
-  if (!process.env.SITE_PASSWORD) {
-    return NextResponse.next();
-  }
-
-  // Skip auth check for API routes and static files
-  if (
-    request.nextUrl.pathname.startsWith('/api') ||
-    request.nextUrl.pathname.startsWith('/_next') ||
-    request.nextUrl.pathname.startsWith('/images')
-  ) {
-    return NextResponse.next();
-  }
-
-  // Check for auth cookie
-  const authCookie = request.cookies.get('site-auth');
-
-  if (authCookie?.value === process.env.SITE_PASSWORD) {
-    return NextResponse.next();
-  }
-
-  // Check for password in URL params (for initial access)
-  const password = request.nextUrl.searchParams.get('password');
-  const showError = password && password !== process.env.SITE_PASSWORD;
-
-  if (password === process.env.SITE_PASSWORD) {
-    const response = NextResponse.next();
-    response.cookies.set('site-auth', password, {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      maxAge: 60 * 60, // 1 hour
-    });
-    return response;
-  }
-
-  // Redirect to access denied page or show simple auth
-  return new NextResponse(
-    `
+function renderLoginPage(title: string, buttonColor: string, showError: boolean) {
+  return `
     <!DOCTYPE html>
     <html>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Access Required</title>
+        <title>${title}</title>
         <style>
           * { box-sizing: border-box; }
           body {
@@ -88,7 +51,7 @@ export function middleware(request: NextRequest) {
           }
           input:focus {
             outline: none;
-            border-color: #0070f3;
+            border-color: ${buttonColor};
           }
           .toggle-password {
             position: absolute;
@@ -108,14 +71,14 @@ export function middleware(request: NextRequest) {
             width: 100%;
             padding: 0.75rem;
             font-size: 1rem;
-            background: #0070f3;
+            background: ${buttonColor};
             color: white;
             border: none;
             border-radius: 0.5rem;
             cursor: pointer;
             transition: background 0.2s;
           }
-          button[type="submit"]:hover { background: #0051cc; }
+          button[type="submit"]:hover { opacity: 0.9; }
           .error {
             background: rgba(239, 68, 68, 0.1);
             border: 1px solid rgba(239, 68, 68, 0.3);
@@ -125,9 +88,7 @@ export function middleware(request: NextRequest) {
             margin-bottom: 1rem;
             font-size: 0.875rem;
           }
-          .shake {
-            animation: shake 0.5s;
-          }
+          .shake { animation: shake 0.5s; }
           @keyframes shake {
             0%, 100% { transform: translateX(0); }
             25% { transform: translateX(-10px); }
@@ -140,9 +101,9 @@ export function middleware(request: NextRequest) {
       </head>
       <body>
         <div class="container">
-          <h1>Access Required</h1>
+          <h1>${title}</h1>
           <p>Please enter the password to continue.</p>
-          ${showError ? '<div class="error shake">❌ Incorrect password. Please try again.</div>' : ''}
+          ${showError ? '<div class="error shake">Incorrect password. Please try again.</div>' : ''}
           <form method="GET">
             <div class="input-wrapper">
               <input
@@ -160,13 +121,13 @@ export function middleware(request: NextRequest) {
                 Show
               </button>
             </div>
-            <button type="submit">Access Site</button>
+            <button type="submit">Access</button>
           </form>
         </div>
         <script>
           function togglePassword() {
-            const input = document.getElementById('password');
-            const button = event.target;
+            var input = document.getElementById('password');
+            var button = document.querySelector('.toggle-password');
             if (input.type === 'password') {
               input.type = 'text';
               button.textContent = 'Hide';
@@ -178,13 +139,89 @@ export function middleware(request: NextRequest) {
         </script>
       </body>
     </html>
-    `,
-    {
-      status: 401,
-      headers: {
-        'Content-Type': 'text/html',
-      },
+  `;
+}
+
+export function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+
+  // Skip auth check for API routes (except /api/admin), static files, and images
+  if (
+    pathname.startsWith('/_next') ||
+    pathname.startsWith('/images')
+  ) {
+    return NextResponse.next();
+  }
+
+  // Admin auth (separate from site auth)
+  if (pathname.startsWith('/admin') || pathname.startsWith('/api/admin')) {
+    if (!process.env.ADMIN_PASSWORD) {
+      return new NextResponse('Admin not configured', { status: 503 });
     }
+
+    const authCookie = request.cookies.get('admin-auth');
+    if (authCookie?.value === process.env.ADMIN_PASSWORD) {
+      return NextResponse.next();
+    }
+
+    // API routes return 401 JSON
+    if (pathname.startsWith('/api/admin')) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
+    // Check for password in URL params
+    const password = request.nextUrl.searchParams.get('password');
+    const showError = !!password && password !== process.env.ADMIN_PASSWORD;
+
+    if (password === process.env.ADMIN_PASSWORD) {
+      // Redirect to clean URL without password param
+      const cleanUrl = new URL(pathname, request.url);
+      const response = NextResponse.redirect(cleanUrl);
+      response.cookies.set('admin-auth', password, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === 'production',
+        maxAge: 60 * 60 * 8, // 8 hours
+      });
+      return response;
+    }
+
+    return new NextResponse(
+      renderLoginPage('Admin Login', '#083528', showError),
+      { status: 401, headers: { 'Content-Type': 'text/html' } }
+    );
+  }
+
+  // Skip site auth for non-admin API routes
+  if (pathname.startsWith('/api')) {
+    return NextResponse.next();
+  }
+
+  // Site-wide password protection
+  if (!process.env.SITE_PASSWORD) {
+    return NextResponse.next();
+  }
+
+  const authCookie = request.cookies.get('site-auth');
+  if (authCookie?.value === process.env.SITE_PASSWORD) {
+    return NextResponse.next();
+  }
+
+  const password = request.nextUrl.searchParams.get('password');
+  const showError = !!password && password !== process.env.SITE_PASSWORD;
+
+  if (password === process.env.SITE_PASSWORD) {
+    const response = NextResponse.next();
+    response.cookies.set('site-auth', password, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === 'production',
+      maxAge: 60 * 60, // 1 hour
+    });
+    return response;
+  }
+
+  return new NextResponse(
+    renderLoginPage('Access Required', '#0070f3', showError),
+    { status: 401, headers: { 'Content-Type': 'text/html' } }
   );
 }
 

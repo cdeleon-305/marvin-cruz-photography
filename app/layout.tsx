@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
 import { Analytics } from "@vercel/analytics/next";
 
@@ -78,9 +76,7 @@ export default function RootLayout({
         <StructuredData />
       </head>
       <body className="antialiased">
-        <Navigation />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
+        {children}
         <Analytics />
       </body>
     </html>
