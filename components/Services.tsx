@@ -7,7 +7,7 @@ const services = [
     title: "Corporate Events",
     description: "Professional corporate event coverage capturing the energy, emotion, and key moments of your events.",
     icon: FiTrendingUp,
-    image: "/images/events-3.jpg",
+    image: "/images/events-17.jpg",
     href: "/portfolio?category=events",
   },
   {
